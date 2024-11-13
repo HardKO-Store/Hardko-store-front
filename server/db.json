@@ -77,7 +77,7 @@
       "categories": ["Guantes", "Boxeo"],
       "created_at": {"$date": "2024-11-11T00:51:11.788Z"},
       "description": "guantes peruanos resistentes",
-      "imageurl": "imagengenerica.com",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "Guantes Uppercut",
       "options": {
         "sizes": ["16oz", "14oz"],
@@ -94,7 +94,7 @@
       "categories": ["Guantes"],
       "created_at": {"$date": "2024-11-11T01:19:03.816Z"},
       "description": "High-quality boxing gloves for training and sparring with enhanced padding for protection.",
-      "imageurl": "https://example.com/venum_elite_boxing_gloves.jpg",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "Venum Elite Boxing Gloves",
       "options": {
         "sizes": ["16 oz"],
@@ -111,7 +111,7 @@
       "categories": ["Shin Guards"],
       "created_at": {"$date": "2024-11-11T01:19:14.123Z"},
       "description": "Durable shin guards designed for Muay Thai, providing optimal protection and flexibility.",
-      "imageurl": "https://example.com/hayabusa_t3_shin_guards.jpg",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "Hayabusa T3 Muay Thai Shin Guards",
       "options": {
         "sizes": ["Medium"],
@@ -128,7 +128,7 @@
       "categories": ["Guantes"],
       "created_at": {"$date": "2024-11-11T01:19:24.475Z"},
       "description": "Lightweight MMA gloves with open fingers for grappling, offering wrist support and comfort.",
-      "imageurl": "https://example.com/rdx_mma_gloves.jpg",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "RDX MMA Grappling Gloves",
       "options": {
         "sizes": ["Large"],
@@ -145,7 +145,7 @@
       "categories": ["Heavy Bags"],
       "created_at": {"$date": "2024-11-11T01:19:33.917Z"},
       "description": "Durable heavy bag for martial arts training, ideal for practicing strikes and kicks.",
-      "imageurl": "https://example.com/fairtex_heavy_bag.jpg",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "Fairtex Heavy Bag",
       "options": {
         "sizes": ["6 ft"],
@@ -162,7 +162,7 @@
       "categories": ["Training Dummy"],
       "created_at": {"$date": "2024-11-11T01:19:41.542Z"},
       "description": "Life-sized training dummy with adjustable height, great for practicing strikes and self-defense.",
-      "imageurl": "https://example.com/century_bob_xl.jpg",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "Century BOB XL Body Opponent Bag",
       "options": {
         "sizes": ["Adjustable"],
@@ -179,7 +179,7 @@
       "categories": ["Headgear"],
       "created_at": {"$date": "2024-11-11T01:19:48.955Z"},
       "description": "Lightweight and durable headgear providing maximum protection during sparring sessions.",
-      "imageurl": "https://example.com/venum_challenger_headgear.jpg",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "Venum Challenger Headgear",
       "options": {
         "sizes": ["One Size"],
@@ -196,7 +196,7 @@
       "categories": ["BJJ Gi"],
       "created_at": {"$date": "2024-11-11T01:19:57.682Z"},
       "description": "High-quality Brazilian Jiu-Jitsu gi with reinforced stitching, suitable for both training and competition.",
-      "imageurl": "https://example.com/tatami_bjj_gi.jpg",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "Tatami Fightwear BJJ Gi",
       "options": {
         "sizes": ["A2"],
@@ -213,7 +213,7 @@
       "categories": ["Uniform"],
       "created_at": {"$date": "2024-11-11T01:20:05.829Z"},
       "description": "Lightweight and breathable taekwondo uniform for both training and tournaments.",
-      "imageurl": "https://example.com/proforce_taekwondo_uniform.jpg",
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
       "name": "ProForce Taekwondo Uniform",
       "options": {
         "sizes": ["Medium"],
