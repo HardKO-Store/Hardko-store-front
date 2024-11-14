@@ -5,6 +5,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips';
 import {NgForOf} from '@angular/common';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class ProductItemComponent {
 
   @Input() mainProduct!: Product;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
 
@@ -32,6 +33,7 @@ export class ProductItemComponent {
 
   }
 
-
-
+  goToProductDetail(id: string) {
+    this.router.navigate(['/products', id]);
+  }
 }

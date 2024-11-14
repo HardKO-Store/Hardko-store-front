@@ -36,6 +36,9 @@ export class LoginPageComponent {
     this.iamApiService.userLogin(this.login).subscribe(
       data => {
         this._snackBar.open('Login Successful', 'Close');
+
+        localStorage.setItem('user', JSON.stringify(data));
+
         //wait for 2 seconds
         setTimeout(() => {
           window.location.href = '/home';

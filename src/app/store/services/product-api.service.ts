@@ -6,7 +6,7 @@ import {catchError, Observable, retry} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsApiService extends BaseService<Product>{
+export class ProductApiService extends BaseService<Product>{
   resourceEndpoint: string = '/products';
 
   /**

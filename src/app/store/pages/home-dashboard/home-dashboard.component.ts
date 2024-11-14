@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ProductItemComponent} from '../../components/product-item/product-item.component';
-import {ProductsApiService} from '../../services/products-api.service';
+import {ProductApiService} from '../../services/product-api.service';
 import {Product} from '../../model/product.entity';
 import {ProductListComponent} from '../../components/product-list/product-list.component';
 
@@ -18,13 +18,21 @@ export class HomeDashboardComponent {
 
   products : Product[] = [];
 
-  constructor(private productsApiService: ProductsApiService) {}
+  constructor(private productsApiService: ProductApiService) {}
 
   ngOnInit() {
     this.productsApiService.getAllProducts().subscribe((products : Product[]) => {
       this.products = products;
       console.log(this.products);
     });
+
+
+    let storedUser = localStorage.getItem('user');
+    if (typeof storedUser === "string") {
+      let user = JSON.parse(storedUser);
+      console.log(user);
+    }
+
   }
 
 }
