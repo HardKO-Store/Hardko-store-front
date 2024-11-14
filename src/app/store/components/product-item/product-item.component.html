@@ -1,0 +1,30 @@
+<mat-card appearance="outlined" class="max-w-sm min-h-80">
+
+  <img mat-card-image
+       [src]="mainProduct.imageurl"
+       class="max-w-max">
+  <mat-card-header>
+
+    <mat-card-title> {{ mainProduct.name}} </mat-card-title>
+    <mat-card-subtitle> {{mainProduct.brand}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="text-2xl">
+      {{mainProduct.price}} $
+    </div>
+    <div>
+      <mat-chip-set>
+        <mat-chip *ngFor="let category of mainProduct.categories" >
+          {{category}}
+        </mat-chip>
+      </mat-chip-set>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>
+      <mat-icon> shopping_cart </mat-icon>
+      Add to Cart
+    </button>
+
+  </mat-card-actions>
+</mat-card>

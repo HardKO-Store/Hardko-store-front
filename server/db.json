@@ -1,241 +1,211 @@
 {
-  "users" : [
+  "users": [
     {
-      "_id": {"$oid": "67315483f11e9c186f01e11f"},
-      "_class": "pe.edu.upc.hardko.store.IAM.domain.model.aggregates.User",
-      "address": {
-        "country": "Peru",
-        "city": "Lima",
-        "street": "Av. Rafael Escardo 531",
-        "zip": "15807"
-      },
-      "created_at": {"$date": "2024-11-11T00:49:07.726Z"},
+      "userId": "67315483f11e9c186f01e11f",
+      "firstName": "Juan",
+      "lastName": "Diaz",
       "email": "A123juandiego@gmail.com",
-      "favorite_products": ["673154fff11e9c186f01e121"],
-      "first_name": "Juan",
-      "last_name": "Diaz",
       "password": "Manix456",
-      "updated_at": {"$date": "2024-11-11T00:58:07.734Z"}
-    },
-    {
-      "_id": {"$oid": "67315af3c8078c559fb60952"},
-      "_class": "pe.edu.upc.hardko.store.IAM.domain.model.aggregates.User",
       "address": {
         "country": "Peru",
         "city": "Lima",
         "street": "Av. Rafael Escardo 531",
         "zip": "15807"
       },
-      "created_at": {"$date": "2024-11-11T01:16:35.043Z"},
+      "favoriteProducts": [
+        "673154fff11e9c186f01e121"
+      ]
+    },
+    {
+      "userId": "67315af3c8078c559fb60952",
+      "firstName": "Wilder",
+      "lastName": "Aliaga",
       "email": "wilderAliaga@gmail.com",
-      "favorite_products": [],
-      "first_name": "Wilder",
-      "last_name": "Aliaga",
       "password": "A123gonzalo",
-      "updated_at": {"$date": "2024-11-11T01:16:35.043Z"}
-    },
-    {
-      "_id": {"$oid": "67315b0cc8078c559fb60953"},
-      "_class": "pe.edu.upc.hardko.store.IAM.domain.model.aggregates.User",
       "address": {
         "country": "Peru",
         "city": "Lima",
         "street": "Av. Rafael Escardo 531",
         "zip": "15807"
       },
-      "created_at": {"$date": "2024-11-11T01:17:00.700Z"},
+      "favoriteProducts": []
+    },
+    {
+      "userId": "67315b0cc8078c559fb60953",
+      "firstName": "Juan",
+      "lastName": "Cabrera",
       "email": "JuanCabreraElMidnai@gmail.com",
-      "favorite_products": [],
-      "first_name": "Juan",
-      "last_name": "Cabrera",
       "password": "midnai123",
-      "updated_at": {"$date": "2024-11-11T01:17:00.700Z"}
-    },
-    {
-      "_id": {"$oid": "67315b29c8078c559fb60954"},
-      "_class": "pe.edu.upc.hardko.store.IAM.domain.model.aggregates.User",
       "address": {
         "country": "Peru",
         "city": "Lima",
         "street": "Av. Rafael Escardo 531",
         "zip": "15807"
       },
-      "created_at": {"$date": "2024-11-11T01:17:29.014Z"},
+      "favoriteProducts": []
+    },
+    {
+      "userId": "67315b29c8078c559fb60954",
+      "firstName": "Gabiel",
+      "lastName": "Casas",
       "email": "CasasAlexiel@gmail.com",
-      "favorite_products": [],
-      "first_name": "Gabiel",
-      "last_name": "Casas",
       "password": "kingoffigthers",
-      "updated_at": {"$date": "2024-11-11T01:17:29.014Z"}
+      "address": {
+        "country": "Peru",
+        "city": "Lima",
+        "street": "Av. Rafael Escardo 531",
+        "zip": "15807"
+      },
+      "favoriteProducts": []
     }
   ],
-  "products" : [
+  "products": [
     {
-      "_id": {"$oid": "673154fff11e9c186f01e121"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
-      "brand": "Uppercut",
-      "categories": ["Guantes", "Boxeo"],
-      "created_at": {"$date": "2024-11-11T00:51:11.788Z"},
-      "description": "guantes peruanos resistentes",
-      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
+      "id": "673154fff11e9c186f01e121",
       "name": "Guantes Uppercut",
-      "options": {
-        "sizes": ["16oz", "14oz"],
-        "colors": ["black", "red"]
-      },
+      "description": "guantes peruanos resistentes",
+      "categories": [
+        "Guantes",
+        "Boxeo"
+      ],
       "price": 160,
+      "brand": "Uppercut",
       "stock": 5,
-      "updated_at": {"$date": "2024-11-11T00:53:27.780Z"}
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
+      "options": {
+        "sizes": [
+          "16oz",
+          "14oz"
+        ],
+        "colors": [
+          "black",
+          "red"
+        ]
+      }
     },
     {
-      "_id": {"$oid": "67315b87c8078c559fb60955"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
-      "brand": "Venum",
-      "categories": ["Guantes"],
-      "created_at": {"$date": "2024-11-11T01:19:03.816Z"},
-      "description": "High-quality boxing gloves for training and sparring with enhanced padding for protection.",
-      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
+      "id": "67315b87c8078c559fb60955",
       "name": "Venum Elite Boxing Gloves",
-      "options": {
-        "sizes": ["16 oz"],
-        "colors": ["Black/Gold"]
-      },
+      "description": "High-quality boxing gloves for training and sparring with enhanced padding for protection.",
+      "categories": [
+        "Guantes"
+      ],
       "price": 120,
-      "stock": 15,
-      "updated_at": {"$date": "2024-11-11T01:19:03.816Z"}
-    },
-    {
-      "_id": {"$oid": "67315b92c8078c559fb60956"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
-      "brand": "Hayabusa",
-      "categories": ["Shin Guards"],
-      "created_at": {"$date": "2024-11-11T01:19:14.123Z"},
-      "description": "Durable shin guards designed for Muay Thai, providing optimal protection and flexibility.",
-      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
-      "name": "Hayabusa T3 Muay Thai Shin Guards",
-      "options": {
-        "sizes": ["Medium"],
-        "colors": ["Red/Black"]
-      },
-      "price": 95,
-      "stock": 10,
-      "updated_at": {"$date": "2024-11-11T01:19:14.123Z"}
-    },
-    {
-      "_id": {"$oid": "67315b9cc8078c559fb60957"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
-      "brand": "RDX",
-      "categories": ["Guantes"],
-      "created_at": {"$date": "2024-11-11T01:19:24.475Z"},
-      "description": "Lightweight MMA gloves with open fingers for grappling, offering wrist support and comfort.",
-      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
-      "name": "RDX MMA Grappling Gloves",
-      "options": {
-        "sizes": ["Large"],
-        "colors": ["Blue/Black"]
-      },
-      "price": 60,
-      "stock": 25,
-      "updated_at": {"$date": "2024-11-11T01:19:24.475Z"}
-    },
-    {
-      "_id": {"$oid": "67315ba5c8078c559fb60958"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
-      "brand": "Fairtex",
-      "categories": ["Heavy Bags"],
-      "created_at": {"$date": "2024-11-11T01:19:33.917Z"},
-      "description": "Durable heavy bag for martial arts training, ideal for practicing strikes and kicks.",
-      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
-      "name": "Fairtex Heavy Bag",
-      "options": {
-        "sizes": ["6 ft"],
-        "colors": ["Black"]
-      },
-      "price": 150,
-      "stock": 8,
-      "updated_at": {"$date": "2024-11-11T01:19:33.917Z"}
-    },
-    {
-      "_id": {"$oid": "67315badc8078c559fb60959"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
-      "brand": "Century",
-      "categories": ["Training Dummy"],
-      "created_at": {"$date": "2024-11-11T01:19:41.542Z"},
-      "description": "Life-sized training dummy with adjustable height, great for practicing strikes and self-defense.",
-      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
-      "name": "Century BOB XL Body Opponent Bag",
-      "options": {
-        "sizes": ["Adjustable"],
-        "colors": ["Skin Tone"]
-      },
-      "price": 300,
-      "stock": 5,
-      "updated_at": {"$date": "2024-11-11T01:19:41.542Z"}
-    },
-    {
-      "_id": {"$oid": "67315bb4c8078c559fb6095a"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
       "brand": "Venum",
-      "categories": ["Headgear"],
-      "created_at": {"$date": "2024-11-11T01:19:48.955Z"},
-      "description": "Lightweight and durable headgear providing maximum protection during sparring sessions.",
+      "stock": 15,
       "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
-      "name": "Venum Challenger Headgear",
       "options": {
-        "sizes": ["One Size"],
-        "colors": ["Black/White"]
-      },
-      "price": 80,
-      "stock": 20,
-      "updated_at": {"$date": "2024-11-11T01:19:48.955Z"}
+        "sizes": [
+          "16 oz"
+        ],
+        "colors": [
+          "Black/Gold"
+        ]
+      }
     },
     {
-      "_id": {"$oid": "67315bbdc8078c559fb6095b"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
-      "brand": "Tatami",
-      "categories": ["BJJ Gi"],
-      "created_at": {"$date": "2024-11-11T01:19:57.682Z"},
-      "description": "High-quality Brazilian Jiu-Jitsu gi with reinforced stitching, suitable for both training and competition.",
+      "id": "67315b9cc8078c559fb60957",
+      "name": "RDX MMA Grappling Gloves",
+      "description": "Lightweight MMA gloves with open fingers for grappling, offering wrist support and comfort.",
+      "categories": [
+        "Guantes"
+      ],
+      "price": 60,
+      "brand": "RDX",
+      "stock": 25,
       "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
-      "name": "Tatami Fightwear BJJ Gi",
       "options": {
-        "sizes": ["A2"],
-        "colors": ["Blue"]
-      },
-      "price": 110,
-      "stock": 12,
-      "updated_at": {"$date": "2024-11-11T01:19:57.682Z"}
+        "sizes": [
+          "Large"
+        ],
+        "colors": [
+          "Blue/Black"
+        ]
+      }
     },
     {
-      "_id": {"$oid": "67315bc5c8078c559fb6095c"},
-      "_class": "pe.edu.upc.hardko.store.products.domain.model.aggregates.Product",
-      "brand": "ProForce",
-      "categories": ["Uniform"],
-      "created_at": {"$date": "2024-11-11T01:20:05.829Z"},
-      "description": "Lightweight and breathable taekwondo uniform for both training and tournaments.",
+      "id": "67315b9cc8078c559fb60957",
+      "name": "RDX MMA Grappling Gloves",
+      "description": "Lightweight MMA gloves with open fingers for grappling, offering wrist support and comfort.",
+      "categories": [
+        "Guantes"
+      ],
+      "price": 60,
+      "brand": "RDX",
+      "stock": 25,
       "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
-      "name": "ProForce Taekwondo Uniform",
       "options": {
-        "sizes": ["Medium"],
-        "colors": ["White"]
-      },
-      "price": 50,
-      "stock": 30,
-      "updated_at": {"$date": "2024-11-11T01:20:05.829Z"}
+        "sizes": [
+          "Large"
+        ],
+        "colors": [
+          "Blue/Black"
+        ]
+      }
+    },
+    {
+      "id": "67315ba5c8078c559fb60958",
+      "name": "Fairtex Heavy Bag",
+      "description": "Durable heavy bag for martial arts training, ideal for practicing strikes and kicks.",
+      "categories": [
+        "Heavy Bags"
+      ],
+      "price": 150,
+      "brand": "Fairtex",
+      "stock": 8,
+      "imageurl": "https://res.cloudinary.com/dbdoazcrx/image/upload/v1726981499/hardkoimgs/ivlh13drxvmrtwx1arw1.webp",
+      "options": {
+        "sizes": [
+          "6 ft"
+        ],
+        "colors": [
+          "Black"
+        ]
+      }
     }
   ],
-  "orders" : [
+  "reviews": [
     {
-      "_id": {"$oid": "673156cff11e9c186f01e123"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T00:58:55.247Z"},
+      "id": "67315761f11e9c186f01e124",
+      "productId": "673154fff11e9c186f01e121",
+      "userId": "67315483f11e9c186f01e11f",
+      "rating": 4,
+      "title": "Buenos guantes",
+      "comment": "me gustaron pero el diseño podria ser mejor",
+      "likes": 1
+    },
+    {
+      "id": "67315dc8c8078c559fb6096a",
+      "productId": "673154fff11e9c186f01e121",
+      "userId": "67315483f11e9c186f01e11f",
+      "rating": 5,
+      "title": "Excelente calidad",
+      "comment": "Los guantes Uppercut son muy resistentes y cómodos. Perfectos para entrenamientos intensos.",
+      "likes": 0
+    },
+    {
+      "id": "67315dfdc8078c559fb60974",
+      "productId": "673154fff11e9c186f01e121",
+      "userId": "67315b0cc8078c559fb60953",
+      "rating": 5,
+      "title": "Súper recomendados",
+      "comment": "Los guantes Uppercut me han dado muy buenos resultados. Comodidad y protección a un precio razonable.",
+      "likes": 0
+    }
+  ],
+  "orders": [
+    {
+      "id": "673156cff11e9c186f01e123",
+      "orderDate": "2024-11-11T00:58:27.912+00:00",
+      "userId": "67315483f11e9c186f01e11f",
+      "status": "CANCELLED",
+      "totalAmount": 320,
       "items": [
         {
           "productId": "673154fff11e9c186f01e121",
           "quantity": 2
         }
       ],
-      "order_date": {"$date": "2024-11-11T00:58:27.912Z"},
       "shipping": {
         "deliveryAddress": {
           "country": "Peru",
@@ -244,23 +214,20 @@
           "zipCode": "15807"
         },
         "trackingNumber": "451748"
-      },
-      "status": "CANCELLED",
-      "total_amount": 320,
-      "updated_at": {"$date": "2024-11-11T01:00:14.860Z"},
-      "user_id": "67315483f11e9c186f01e11f"
+      }
     },
     {
-      "_id": {"$oid": "67315ce6c8078c559fb6095d"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:24:54.845Z"},
+      "id": "67315ce6c8078c559fb6095d",
+      "orderDate": "2024-11-11T00:01:35.930+00:00",
+      "userId": "67315483f11e9c186f01e11f",
+      "status": "PENDING",
+      "totalAmount": 120,
       "items": [
         {
           "productId": "673154fff11e9c186f01e121",
           "quantity": 1
         }
       ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
       "shipping": {
         "deliveryAddress": {
           "country": "Peru",
@@ -269,191 +236,14 @@
           "zipCode": "15807"
         },
         "trackingNumber": "968093"
-      },
-      "status": "PENDING",
-      "total_amount": 120,
-      "updated_at": {"$date": "2024-11-11T01:24:54.845Z"},
-      "user_id": "67315483f11e9c186f01e11f"
+      }
     },
     {
-      "_id": {"$oid": "67315cf6c8078c559fb6095e"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:10.406Z"},
-      "items": [
-        {
-          "productId": "67315b92c8078c559fb60956",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "776659"
-      },
+      "id": "67315d20c8078c559fb60965",
+      "orderDate": "2024-11-11T00:01:35.930+00:00",
+      "userId": "67315af3c8078c559fb60952",
       "status": "PENDING",
-      "total_amount": 110,
-      "updated_at": {"$date": "2024-11-11T01:25:10.406Z"},
-      "user_id": "67315b0cc8078c559fb60953"
-    },
-    {
-      "_id": {"$oid": "67315cfec8078c559fb6095f"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:18.577Z"},
-      "items": [
-        {
-          "productId": "67315b9cc8078c559fb60957",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "690059"
-      },
-      "status": "PENDING",
-      "total_amount": 85,
-      "updated_at": {"$date": "2024-11-11T01:25:18.577Z"},
-      "user_id": "67315b29c8078c559fb60954"
-    },
-    {
-      "_id": {"$oid": "67315d03c8078c559fb60960"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:23.022Z"},
-      "items": [
-        {
-          "productId": "67315ba5c8078c559fb60958",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "234227"
-      },
-      "status": "PENDING",
-      "total_amount": 150,
-      "updated_at": {"$date": "2024-11-11T01:25:23.022Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315d09c8078c559fb60961"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:29.333Z"},
-      "items": [
-        {
-          "productId": "67315badc8078c559fb60959",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "23423"
-      },
-      "status": "PENDING",
-      "total_amount": 200,
-      "updated_at": {"$date": "2024-11-11T01:25:29.333Z"},
-      "user_id": "67315af3c8078c559fb60952"
-    },
-    {
-      "_id": {"$oid": "67315d0ec8078c559fb60962"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:34.909Z"},
-      "items": [
-        {
-          "productId": "67315bb4c8078c559fb6095a",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "393605"
-      },
-      "status": "PENDING",
-      "total_amount": 95,
-      "updated_at": {"$date": "2024-11-11T01:25:34.909Z"},
-      "user_id": "67315b0cc8078c559fb60953"
-    },
-    {
-      "_id": {"$oid": "67315d13c8078c559fb60963"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:39.498Z"},
-      "items": [
-        {
-          "productId": "67315bbdc8078c559fb6095b",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "413569"
-      },
-      "status": "PENDING",
-      "total_amount": 130,
-      "updated_at": {"$date": "2024-11-11T01:25:39.498Z"},
-      "user_id": "67315b29c8078c559fb60954"
-    },
-    {
-      "_id": {"$oid": "67315d1ac8078c559fb60964"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:46.198Z"},
-      "items": [
-        {
-          "productId": "67315bc5c8078c559fb6095c",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "925596"
-      },
-      "status": "PENDING",
-      "total_amount": 200,
-      "updated_at": {"$date": "2024-11-11T01:25:46.198Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315d20c8078c559fb60965"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:52.065Z"},
+      "totalAmount": 240,
       "items": [
         {
           "productId": "673154fff11e9c186f01e121",
@@ -464,7 +254,6 @@
           "quantity": 1
         }
       ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
       "shipping": {
         "deliveryAddress": {
           "country": "Peru",
@@ -473,103 +262,14 @@
           "zipCode": "15807"
         },
         "trackingNumber": "260006"
-      },
-      "status": "PENDING",
-      "total_amount": 240,
-      "updated_at": {"$date": "2024-11-11T01:25:52.065Z"},
-      "user_id": "67315af3c8078c559fb60952"
+      }
     },
     {
-      "_id": {"$oid": "67315d25c8078c559fb60966"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:25:57.695Z"},
-      "items": [
-        {
-          "productId": "67315b92c8078c559fb60956",
-          "quantity": 1
-        },
-        {
-          "productId": "67315b9cc8078c559fb60957",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "969548"
-      },
+      "id": "67315d46c8078c559fb60969",
+      "orderDate": "2024-11-11T00:01:35.930+00:00",
+      "userId": "67315af3c8078c559fb60952",
       "status": "PENDING",
-      "total_amount": 210,
-      "updated_at": {"$date": "2024-11-11T01:25:57.695Z"},
-      "user_id": "67315b0cc8078c559fb60953"
-    },
-    {
-      "_id": {"$oid": "67315d2bc8078c559fb60967"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:26:03.018Z"},
-      "items": [
-        {
-          "productId": "67315ba5c8078c559fb60958",
-          "quantity": 1
-        },
-        {
-          "productId": "67315badc8078c559fb60959",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "379920"
-      },
-      "status": "PENDING",
-      "total_amount": 220,
-      "updated_at": {"$date": "2024-11-11T01:26:03.018Z"},
-      "user_id": "67315b29c8078c559fb60954"
-    },
-    {
-      "_id": {"$oid": "67315d34c8078c559fb60968"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:26:12.265Z"},
-      "items": [
-        {
-          "productId": "67315bb4c8078c559fb6095a",
-          "quantity": 1
-        },
-        {
-          "productId": "67315bbdc8078c559fb6095b",
-          "quantity": 1
-        }
-      ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
-      "shipping": {
-        "deliveryAddress": {
-          "country": "Peru",
-          "city": "Lima",
-          "street": "Av. Rafael Escardo 531",
-          "zipCode": "15807"
-        },
-        "trackingNumber": "790849"
-      },
-      "status": "PENDING",
-      "total_amount": 270,
-      "updated_at": {"$date": "2024-11-11T01:26:12.265Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315d46c8078c559fb60969"},
-      "_class": "pe.edu.upc.hardko.store.orders.domain.model.aggregates.Order",
-      "created_at": {"$date": "2024-11-11T01:26:30.085Z"},
+      "totalAmount": 250,
       "items": [
         {
           "productId": "67315bc5c8078c559fb6095c",
@@ -580,7 +280,6 @@
           "quantity": 1
         }
       ],
-      "order_date": {"$date": "2024-11-11T00:01:35.930Z"},
       "shipping": {
         "deliveryAddress": {
           "country": "Peru",
@@ -589,205 +288,7 @@
           "zipCode": "15807"
         },
         "trackingNumber": "198743"
-      },
-      "status": "PENDING",
-      "total_amount": 250,
-      "updated_at": {"$date": "2024-11-11T01:26:30.085Z"},
-      "user_id": "67315af3c8078c559fb60952"
-    }
-  ],
-  "reviews" : [
-    {
-      "_id": {"$oid": "67315761f11e9c186f01e124"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "me gustaron pero el diseño podria ser mejor",
-      "created_at": {"$date": "2024-11-11T01:01:21.829Z"},
-      "liked_by": ["67315483f11e9c186f01e11f"],
-      "product_id": "673154fff11e9c186f01e121",
-      "rating": 4,
-      "title": "Buenos guantes",
-      "updated_at": {"$date": "2024-11-11T01:02:52.935Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315dc8c8078c559fb6096a"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "Los guantes Uppercut son muy resistentes y cómodos. Perfectos para entrenamientos intensos.",
-      "created_at": {"$date": "2024-11-11T01:28:40.730Z"},
-      "liked_by": [],
-      "product_id": "673154fff11e9c186f01e121",
-      "rating": 5,
-      "title": "Excelente calidad",
-      "updated_at": {"$date": "2024-11-11T01:28:40.730Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315dcec8078c559fb6096b"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "Los guantes Venum Elite son de alta calidad, pero un poco más caros que otros de similar calidad.",
-      "created_at": {"$date": "2024-11-11T01:28:46.180Z"},
-      "liked_by": [],
-      "product_id": "67315b87c8078c559fb60955",
-      "rating": 4,
-      "title": "Buen producto",
-      "updated_at": {"$date": "2024-11-11T01:28:46.180Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315dd3c8078c559fb6096c"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "Las espinilleras Hayabusa T3 son muy resistentes y me dan mucha seguridad durante mis entrenamientos.",
-      "created_at": {"$date": "2024-11-11T01:28:51.042Z"},
-      "liked_by": [],
-      "product_id": "67315b92c8078c559fb60956",
-      "rating": 5,
-      "title": "Protección total",
-      "updated_at": {"$date": "2024-11-11T01:28:51.042Z"},
-      "user_id": "67315af3c8078c559fb60952"
-    },
-    {
-      "_id": {"$oid": "67315dd8c8078c559fb6096d"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "Son cómodas para el entrenamiento de MMA, pero no las recomendaría para uso prolongado.",
-      "created_at": {"$date": "2024-11-11T01:28:56.086Z"},
-      "liked_by": [],
-      "product_id": "67315b9cc8078c559fb60957",
-      "rating": 3,
-      "title": "Cumple su función",
-      "updated_at": {"$date": "2024-11-11T01:28:56.086Z"},
-      "user_id": "67315af3c8078c559fb60952"
-    },
-    {
-      "_id": {"$oid": "67315dddc8078c559fb6096e"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "La bolsa Fairtex Heavy Bag es robusta, perfecta para entrenar fuerza, aunque podría ser más liviana.",
-      "created_at": {"$date": "2024-11-11T01:29:01.225Z"},
-      "liked_by": [],
-      "product_id": "67315ba5c8078c559fb60958",
-      "rating": 4,
-      "title": "Muy buena calidad",
-      "updated_at": {"$date": "2024-11-11T01:29:01.225Z"},
-      "user_id": "67315b0cc8078c559fb60953"
-    },
-    {
-      "_id": {"$oid": "67315de2c8078c559fb6096f"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "El BOB XL es una de las mejores compras que he hecho, increíble para mejorar mis técnicas de golpeo.",
-      "created_at": {"$date": "2024-11-11T01:29:06.757Z"},
-      "liked_by": [],
-      "product_id": "67315badc8078c559fb60959",
-      "rating": 5,
-      "title": "Gran inversión",
-      "updated_at": {"$date": "2024-11-11T01:29:06.757Z"},
-      "user_id": "67315b0cc8078c559fb60953"
-    },
-    {
-      "_id": {"$oid": "67315debc8078c559fb60970"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "El protector de cabeza Venum Challenger es muy robusto, pero no lo encontré cómodo ni bien equilibrado.",
-      "created_at": {"$date": "2024-11-11T01:29:15.187Z"},
-      "liked_by": [],
-      "product_id": "67315bb4c8078c559fb6095a",
-      "rating": 2,
-      "title": "Demasiado pesado",
-      "updated_at": {"$date": "2024-11-11T01:29:15.187Z"},
-      "user_id": "67315b29c8078c559fb60954"
-    },
-    {
-      "_id": {"$oid": "67315defc8078c559fb60971"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "El gi Tatami Fightwear BJJ es excelente. Comodidad, durabilidad y un ajuste perfecto para entrenamientos y competiciones.",
-      "created_at": {"$date": "2024-11-11T01:29:19.651Z"},
-      "liked_by": [],
-      "product_id": "67315bbdc8078c559fb6095b",
-      "rating": 5,
-      "title": "Excelente calidad",
-      "updated_at": {"$date": "2024-11-11T01:29:19.651Z"},
-      "user_id": "67315b29c8078c559fb60954"
-    },
-    {
-      "_id": {"$oid": "67315df4c8078c559fb60972"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "El uniforme ProForce Taekwondo es ligero y cómodo, ideal para comenzar en taekwondo.",
-      "created_at": {"$date": "2024-11-11T01:29:24.389Z"},
-      "liked_by": [],
-      "product_id": "67315bc5c8078c559fb6095c",
-      "rating": 4,
-      "title": "Bueno para principiantes",
-      "updated_at": {"$date": "2024-11-11T01:29:24.389Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315df9c8078c559fb60973"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "Los guantes Venum Elite son cómodos, pero no tienen tanta durabilidad como pensaba.",
-      "created_at": {"$date": "2024-11-11T01:29:29.407Z"},
-      "liked_by": [],
-      "product_id": "67315b87c8078c559fb60955",
-      "rating": 3,
-      "title": "Mejor de lo esperado",
-      "updated_at": {"$date": "2024-11-11T01:29:29.407Z"},
-      "user_id": "67315af3c8078c559fb60952"
-    },
-    {
-      "_id": {"$oid": "67315dfdc8078c559fb60974"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "Los guantes Uppercut me han dado muy buenos resultados. Comodidad y protección a un precio razonable.",
-      "created_at": {"$date": "2024-11-11T01:29:33.644Z"},
-      "liked_by": [],
-      "product_id": "673154fff11e9c186f01e121",
-      "rating": 5,
-      "title": "Súper recomendados",
-      "updated_at": {"$date": "2024-11-11T01:29:33.644Z"},
-      "user_id": "67315b0cc8078c559fb60953"
-    },
-    {
-      "_id": {"$oid": "67315e01c8078c559fb60975"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "Las espinilleras Hayabusa son muy buenas, pero un poco duras al principio. Se necesitan unos días de adaptación.",
-      "created_at": {"$date": "2024-11-11T01:29:37.788Z"},
-      "liked_by": [],
-      "product_id": "67315b92c8078c559fb60956",
-      "rating": 4,
-      "title": "Recomendado para entrenamientos",
-      "updated_at": {"$date": "2024-11-11T01:29:37.788Z"},
-      "user_id": "67315b29c8078c559fb60954"
-    },
-    {
-      "_id": {"$oid": "67315e05c8078c559fb60976"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "La bolsa Fairtex es muy buena para entrenar fuerza, aunque ocupa bastante espacio.",
-      "created_at": {"$date": "2024-11-11T01:29:41.995Z"},
-      "liked_by": [],
-      "product_id": "67315ba5c8078c559fb60958",
-      "rating": 4,
-      "title": "Satisfactorio",
-      "updated_at": {"$date": "2024-11-11T01:29:41.995Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315e0ac8078c559fb60977"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "Los guantes MMA RDX no me gustaron. No ofrecen la protección que esperaba.",
-      "created_at": {"$date": "2024-11-11T01:29:46.670Z"},
-      "liked_by": [],
-      "product_id": "67315b9cc8078c559fb60957",
-      "rating": 1,
-      "title": "No recomendados",
-      "updated_at": {"$date": "2024-11-11T01:29:46.670Z"},
-      "user_id": "67315483f11e9c186f01e11f"
-    },
-    {
-      "_id": {"$oid": "67315e0fc8078c559fb60978"},
-      "_class": "pe.edu.upc.hardko.store.reviews.domain.model.aggregates.Review",
-      "comment": "El gi BJJ Tatami es increíble, muy duradero y cómodo. Perfecto para entrenamientos intensos.",
-      "created_at": {"$date": "2024-11-11T01:29:51.084Z"},
-      "liked_by": [],
-      "product_id": "67315bbdc8078c559fb6095b",
-      "rating": 5,
-      "title": "Gran calidad",
-      "updated_at": {"$date": "2024-11-11T01:29:51.084Z"},
-      "user_id": "67315b0cc8078c559fb60953"
+      }
     }
   ]
 }
