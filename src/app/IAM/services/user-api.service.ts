@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {BaseService} from '../../shared/services/base.service';
 import {User} from '../model/user.entity';
 import {Observable} from 'rxjs';
+import {UpdateUser} from '../model/update-user.entity';
+import {ReducedProduct} from '../model/reduced-product.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +20,15 @@ export class UserApiService extends BaseService<User>{
   * */
   getUserById(id: string): Observable<User> {
     return this.http.get<User>(`${this.baseUrl}${this.resourceEndpoint}/${id}`, this.httpOptions);
+  }
+
+
+  updateUser(userInfo: UpdateUser, userId: string): Observable<User> {
+    return this.http.put<User>(`${this.baseUrl}${this.resourceEndpoint}/${userId}`, userInfo, this.httpOptions);
+  }
+
+  getUserFavoriteProducts(userId: string): Observable<ReducedProduct[]> {
+    return this.http.get<ReducedProduct[]>(`${this.baseUrl}${this.resourceEndpoint}/${userId}/favorites`, this.httpOptions);
   }
 
 

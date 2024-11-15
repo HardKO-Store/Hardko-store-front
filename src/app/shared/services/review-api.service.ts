@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {BaseService} from '../../shared/services/base.service';
-import {Review} from '../model/review.entity';
+import {BaseService} from './base.service';
+import {Review} from '../../store/model/review.entity';
 import {catchError, Observable, retry} from 'rxjs';
-import {ReviewCreateEntity} from '../model/review-create.entity';
+import {ReviewCreateEntity} from '../../store/model/review-create.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +32,11 @@ export class ReviewApiService extends BaseService<Review>{
 
   removeLikeToReview(userId: string, reviewId: string) : Observable<any>{
     return this.http.put(`${this.baseUrl}${this.resourceEndpoint}/${reviewId}/unlike`, {"userId": userId}, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  getReviewsByUserId(userId: string) : Observable<Review[]>{
+    return this.http.get<Review[]>(`${this.baseUrl}${this.resourceEndpoint}/user/${userId}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 

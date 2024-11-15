@@ -21,9 +21,9 @@
     </div>
   </mat-card-content>
   <mat-card-actions >
-    <button mat-button >
-      <mat-icon> shopping_cart </mat-icon>
-      Add to Cart
+    <button mat-button (click)="addToFavorites(mainProduct.id)" >
+      <mat-icon> favorite </mat-icon>
+      Add to Favorites
     </button>
     <button mat-button (click)="goToProductDetail(mainProduct.id)">
       <mat-icon> info </mat-icon>

@@ -8,7 +8,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatChip, MatChipSet} from '@angular/material/chips';
 import {NgForOf, NgIf} from '@angular/common';
 import {Review} from '../../model/review.entity';
-import {ReviewApiService} from '../../services/review-api.service';
+import {ReviewApiService} from '../../../shared/services/review-api.service';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -95,6 +95,10 @@ export class ProductDetailComponent {
     if (userJson){
       this.user = JSON.parse(userJson);
     }
+    else {
+      this._snackBar.open('not logged in', 'Close' , {duration: 2000});
+      return;
+    }
 
     let reviewToCreate = new ReviewCreateEntity(
       this.product.id,
@@ -126,6 +130,10 @@ export class ProductDetailComponent {
     if (userJson){
       this.user = JSON.parse(userJson);
     }
+    else {
+      this._snackBar.open('not logged in', 'Close' , {duration: 2000});
+      return;
+    }
 
     this.reviewApiService.addLikeToReview(this.user.userId, id).subscribe(
       data => {
@@ -149,6 +157,10 @@ export class ProductDetailComponent {
     let userJson = localStorage.getItem('user');
     if (userJson){
       this.user = JSON.parse(userJson);
+    }
+    else {
+      this._snackBar.open('not logged in', 'Close' , {duration: 2000});
+      return;
     }
 
     this.reviewApiService.removeLikeToReview(this.user.userId, id).subscribe(
