@@ -80,10 +80,22 @@
               <div>
                 {{review.comment}}
               </div>
-              <div>
-                <button mat-mini-fab color="primary">
+              <div >
+                <button mat-mini-fab color="primary"
+                (click)="onLikeReview(review.id)"
+                >
                   <mat-icon>thumb_up</mat-icon>
+
                 </button>
+                <button mat-mini-fab color="primary"
+                        (click)="onDislikeReview(review.id)"
+                >
+                  <mat-icon>thumb_down</mat-icon>
+
+                </button>
+                <div>
+                  {{review.likes}} likes
+                </div>
               </div>
             </div>
 
@@ -100,23 +112,25 @@
               <div class="flex gap-5">
                 <mat-form-field>
                   <mat-label>Title</mat-label>
-                  <input matInput>
+                  <input matInput [(ngModel)]="title">
 
                 </mat-form-field>
                 <mat-form-field>
                   <mat-label>Rating</mat-label>
-                  <input matInput type="number" max="5" min="1">
+                  <input matInput type="number" max="5" min="1" [(ngModel)]="rating">
                 </mat-form-field>
               </div>
               <div >
                 <mat-form-field class="w-full">
                   <mat-label>Comment</mat-label>
-                  <textarea matInput></textarea>
+                  <textarea matInput [(ngModel)]="comment"></textarea>
                 </mat-form-field>
               </div>
             </div>
             <div class="flex justify-end">
-              <button mat-raised-button color="primary" >
+              <button mat-raised-button
+                      color="primary"
+                      (click)="onCreateReview()">
                 Add Review
               </button>
             </div>

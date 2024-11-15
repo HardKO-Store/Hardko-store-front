@@ -3,6 +3,7 @@ import {HomeDashboardComponent} from './store/pages/home-dashboard/home-dashboar
 import {ProductDetailComponent} from './store/pages/product-detail/product-detail.component';
 import {LoginPageComponent} from './IAM/pages/login-page/login-page.component';
 import {CartPageComponent} from './cart/pages/cart-page/cart-page.component';
+import {UserDashboardComponent} from './IAM/pages/user-dashboard/user-dashboard.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'cart',
     component: CartPageComponent
+  },
+  {
+    path: 'user/:id',
+    component: UserDashboardComponent
   }
 ];

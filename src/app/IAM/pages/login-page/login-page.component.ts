@@ -7,6 +7,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {User} from '../../model/user.entity';
 
 @Component({
   selector: 'app-login-page',
@@ -26,10 +27,15 @@ export class LoginPageComponent {
   protected login: Login;
   private _snackBar = inject(MatSnackBar);
 
+
   constructor(private iamApiService: IamApiService) {
     this.login = new Login(null,null);
   }
 
+
+  ngOnInit() {
+    localStorage.clear()
+  }
 
   userLogin(){
     console.log(this.login);

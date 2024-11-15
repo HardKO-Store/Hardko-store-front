@@ -11,4 +11,9 @@ import {MainHeaderComponent} from './public/components/main-header/main-header.c
 })
 export class AppComponent {
   title = 'Hardko-store-front';
+
+  ngOnInit() {
+
+  }
+
 }

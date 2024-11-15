@@ -11,6 +11,18 @@
       <mat-icon>shopping_cart</mat-icon>
       Cart
     </button>
+    @if (user) {
+      <button mat-button (click)="goToUser()">
+        <mat-icon>account_circle</mat-icon>
+        {{user.lastName}}
+      </button>
+    } @else {
+      <button mat-button (click)="goToLogin()">
+        <mat-icon>account_circle</mat-icon>
+        Login
+      </button>
+    }
+
 
   </mat-toolbar-row>
 
