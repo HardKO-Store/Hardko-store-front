@@ -1,0 +1,61 @@
+<div class="p-10">
+  <mat-card appearance="outlined" class="p-10">
+    <mat-card-title>
+       Cart
+    </mat-card-title>
+    <mat-card-content>
+
+
+
+      <div class="flex gap-4">
+        <div class="mt-5 " style="min-width: 75%">
+          <div *ngIf="cartItems.length === 0">
+            <p>Your cart is empty</p>
+          </div>
+
+          <div *ngFor="let item of cartItems">
+            <mat-card class="mb-5 p-5">
+              <mat-card-content>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h4>{{ item.name }}</h4>
+                  </div>
+                  <div>
+                    <p>Price: {{ item.price  }}</p>
+                    <p>Quantity: {{ item.quantity }}</p>
+                  </div>
+                </div>
+              </mat-card-content>
+              <mat-card-actions class="flex justify-end">
+
+                <button mat-flat-button color="warn"
+                        (click)="removeFromCart(item.id)">
+                  Remove
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div class="w-full ">
+          <mat-card class="mt-5 ">
+            <mat-card-content>
+              <h3> Total: {{ getOrderTotalPrice() }} $ </h3>
+            </mat-card-content>
+            <mat-card-actions class="flex  tems-center justify-center">
+                <button mat-flat-button class="w-full"
+                        color="primary"
+                        (click)="createOrder()">
+                  Place Order
+                </button>
+            </mat-card-actions>
+
+          </mat-card>
+        </div>
+      </div>
+
+
+
+
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -6,8 +6,8 @@ import {throwError} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class BaseService {
-  basePath: string = `${environment.serverBasePath}`;
+export class BaseService<T> {
+  baseUrl: string = `${environment.serverBasePath}`;
 
   httpOptions = {
     headers: new HttpHeaders({

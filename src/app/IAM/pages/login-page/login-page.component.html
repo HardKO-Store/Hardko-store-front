@@ -1,0 +1,36 @@
+<div class="flex items-center justify-center">
+
+  <mat-card class="min-w-96 m-10 p-7">
+    <mat-card-title>
+      Login
+    </mat-card-title>
+    <mat-card-content>
+      <div class="flex flex-col items-start mt-5">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="login.email">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput [(ngModel)]="login.password">
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="justify-between">
+      <button
+        mat-raised-button
+        (click)="toRegister()"
+        color="accent" >
+        Register
+      </button>
+      <button
+        mat-raised-button
+        (click)="userLogin()"
+        color="primary" >
+        Login
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

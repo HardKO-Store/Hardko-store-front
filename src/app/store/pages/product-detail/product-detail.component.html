@@ -1,0 +1,145 @@
+<div class="flex items-center justify-center" >
+  <mat-card class="p-10" *ngIf="product">
+    <mat-card-content>
+      <div class="flex items-center justify-center gap-12">
+        <div>
+          <img [src]="product.imageurl" class="max-w-xl">
+        </div>
+        <div class="flex items-start justify-center text-left max-w-2xl">
+          <div>
+            <div class="mb-4">
+              <span class="text-6xl font-bold ">
+                {{ product.name }}
+              </span>
+            </div>
+            <div class="flex justify-between mb-2">
+              <div>
+                <span class="text-2xl">{{ product.price  }} $</span>
+              </div>
+              <div>
+                <span>stock: {{ product.stock }}</span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <button mat-raised-button
+                      (click)="addToCart(product)"
+                      color="primary">
+                Add to Cart
+              </button>
+            </div>
+            <mat-divider/>
+            <div class="mt-5">
+              <div>
+                <p>{{ product.description }}</p>
+              </div>
+              <div>
+                <mat-chip-set>
+                  <mat-chip *ngFor="let category of product.categories" >
+                    {{category}}
+                  </mat-chip>
+                </mat-chip-set>
+              </div>
+              <div>
+                <mat-chip-set>
+                  <mat-chip *ngFor="let sizes of product.options.sizes" >
+                    {{sizes}}
+                  </mat-chip>
+                </mat-chip-set>
+              </div>
+              <div>
+                <mat-chip-set>
+                  <mat-chip *ngFor="let colors of product.options.colors" >
+                    {{colors}}
+                  </mat-chip>
+                </mat-chip-set>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="mt-8 mb-8">
+        <mat-divider/>
+      </div>
+      <div>
+        <span class="text-4xl font-bold ">
+          Reviews
+              </span>
+      </div>
+      <div *ngFor="let review of reviews" class="mt-5">
+        <mat-card class="p-5 mb-4" appearance="outlined">
+          <mat-card-title>
+            {{review.title}}
+          </mat-card-title>
+          <mat-card-subtitle>
+            rating: {{review.rating}}
+          </mat-card-subtitle>
+          <mat-card-content>
+            <div class="flex justify-between mt-2">
+              <div>
+                {{review.comment}}
+              </div>
+              <div >
+                <button mat-mini-fab color="primary"
+                (click)="onLikeReview(review.id)"
+                >
+                  <mat-icon>thumb_up</mat-icon>
+
+                </button>
+                <button mat-mini-fab color="primary"
+                        (click)="onDislikeReview(review.id)"
+                >
+                  <mat-icon>thumb_down</mat-icon>
+
+                </button>
+                <div>
+                  {{review.likes}} likes
+                </div>
+              </div>
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div>
+        <mat-card class="p-5 mb-4" appearance="outlined">
+          <mat-card-title>
+            Add Review
+          </mat-card-title>
+          <mat-card-content>
+            <div class="mt-5">
+              <div class="flex gap-5">
+                <mat-form-field>
+                  <mat-label>Title</mat-label>
+                  <input matInput [(ngModel)]="title">
+
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>Rating</mat-label>
+                  <input matInput type="number" max="5" min="1" [(ngModel)]="rating">
+                </mat-form-field>
+              </div>
+              <div >
+                <mat-form-field class="w-full">
+                  <mat-label>Comment</mat-label>
+                  <textarea matInput [(ngModel)]="comment"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="flex justify-end">
+              <button mat-raised-button
+                      color="primary"
+                      (click)="onCreateReview()">
+                Add Review
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>

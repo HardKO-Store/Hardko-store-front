@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <mat-toolbar-row >
+    <span>HardKO</span>
+    <span class="flex-1"></span>
+
+    <button mat-button (click)="goToHome()">
+      <mat-icon>home</mat-icon>
+      Home
+    </button>
+    <button mat-button (click)="goToCart()">
+      <mat-icon>shopping_cart</mat-icon>
+      Cart
+    </button>
+    @if (user) {
+      <button mat-button (click)="goToUser()">
+        <mat-icon>account_circle</mat-icon>
+        {{user.lastName}}
+      </button>
+    } @else {
+      <button mat-button (click)="goToLogin()">
+        <mat-icon>account_circle</mat-icon>
+        Login
+      </button>
+    }
+
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
