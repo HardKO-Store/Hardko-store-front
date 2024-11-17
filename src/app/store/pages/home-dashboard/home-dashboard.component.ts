@@ -23,14 +23,12 @@ export class HomeDashboardComponent {
   ngOnInit() {
     this.productsApiService.getAllProducts().subscribe((products : Product[]) => {
       this.products = products;
-      console.log(this.products);
     });
 
 
     let storedUser = localStorage.getItem('user');
     if (typeof storedUser === "string") {
       let user = JSON.parse(storedUser);
-      console.log(user);
     }
 
   }

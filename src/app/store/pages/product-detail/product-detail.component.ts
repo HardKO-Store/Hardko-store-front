@@ -63,7 +63,6 @@ export class ProductDetailComponent {
       this.productApiService.getProductById(productId).subscribe(
         data => {
           this.product = data;
-          console.log(this.product);
         },
         error => {
           console.log(error);
@@ -73,7 +72,6 @@ export class ProductDetailComponent {
       this.reviewApiService.getReviewsByProductId(productId).subscribe(
         data => {
           this.reviews = data;
-          console.log(this.reviews);
         },
         error => {
           console.log(error);
@@ -177,6 +175,43 @@ export class ProductDetailComponent {
         console.log(error);
       }
     );
+  }
+
+
+  addToCart(productToSave : Product){
+    let cartJson = localStorage.getItem('cart');
+    let cart = [];
+    if (cartJson){
+      cart = JSON.parse(cartJson);
+    }
+
+    let productIndex = cart.findIndex((product: { id: string; }) => product.id === productToSave.id);
+    if (productIndex === -1) {
+      // If the product is not in the cart, add it with quantity 1
+      cart.push(
+        {
+          id: productToSave.id,
+          name: productToSave.name,
+          price: productToSave.price,
+          quantity: 1
+        }
+      );
+    } else {
+      // If the product is already in the cart, increase the quantity
+      cart[productIndex].quantity += 1;
+    }
+
+
+
+
+
+    this._snackBar.open('Product added to cart!', 'Close', {
+      duration: 2000 });
+
+    console.log(cart);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
 
   }
+
 }

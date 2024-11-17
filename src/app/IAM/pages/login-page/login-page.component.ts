@@ -44,6 +44,7 @@ export class LoginPageComponent {
         this._snackBar.open('Login Successful', 'Close');
 
         localStorage.setItem('user', JSON.stringify(data));
+        localStorage.setItem('cart', JSON.stringify([]));
 
         //wait for 2 seconds
         setTimeout(() => {
