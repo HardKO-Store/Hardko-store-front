@@ -92,7 +92,6 @@ export class CartPageComponent {
 
     this.orderApiService.createOrder(order).subscribe(
       (order) => {
-        console.log('Order created', order);
         this.cartItems = [];
         localStorage.setItem('cart', JSON.stringify(this.cartItems));
         this.router.navigate(['/user', this.user.userId ]);

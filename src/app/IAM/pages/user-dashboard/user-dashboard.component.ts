@@ -20,6 +20,10 @@ import {Review} from '../../../store/model/review.entity';
 import {MatTableModule} from '@angular/material/table';
 import {Router} from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatDialog} from '@angular/material/dialog';
+import {
+  ConfirmAccDeletionDialogComponent
+} from '../../components/confirm-acc-deletion-dialog/confirm-acc-deletion-dialog.component';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -50,6 +54,7 @@ export class UserDashboardComponent {
   reviews!: Review[];
 
   private _snackBar = inject(MatSnackBar);
+  private dialog = inject(MatDialog);
 
   orderColumns: string[] = ['ID', 'OrderDate', 'Status', 'TotalAmount','Actions'];
 
@@ -73,24 +78,18 @@ export class UserDashboardComponent {
 
     this.orderApiService.getOrdersByUserId(this.user.userId).subscribe(
       orders => {
-        console.log('Orders for user: ');
-        console.log(orders);
         this.orders = orders;
       }
     );
 
     this.userApiService.getUserFavoriteProducts(this.user.userId).subscribe(
       favoriteProducts => {
-        console.log('Favorite products for user: ');
-        console.log(favoriteProducts);
         this.favoriteProducts = favoriteProducts;
       }
     );
 
     this.reviewApiService.getReviewsByUserId(this.user.userId).subscribe(
       reviews => {
-        console.log('Reviews for user: ');
-        console.log(reviews);
         this.reviews = reviews;
       }
     );
@@ -102,8 +101,11 @@ export class UserDashboardComponent {
   }
 
   logOut(){
-    localStorage.removeItem('user');
+
+    localStorage.clear();
+
     this.router.navigate(['/login']);
+    window.location.reload();
   }
 
   cancelOrder(id: string) {
@@ -124,4 +126,19 @@ export class UserDashboardComponent {
   }
 
 
+  deleteAccount() {
+    const dialogRef = this.dialog.open(ConfirmAccDeletionDialogComponent);
+
+    dialogRef.componentInstance.deleteConfirmed.subscribe(() => {
+      this.userApiService.deleteUser(this.user.userId).subscribe(
+
+      );
+      localStorage.clear();
+
+      this.router.navigate(['/login']);
+      window.location.reload();
+    });
+
+
+  }
 }

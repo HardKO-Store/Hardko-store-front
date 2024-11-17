@@ -135,7 +135,6 @@ export class ProductDetailComponent {
 
     this.reviewApiService.addLikeToReview(this.user.userId, id).subscribe(
       data => {
-        console.log(data);
         let reviewIndex = this.reviews.findIndex(review => review.id === id);
         this.reviews[reviewIndex].likes = data.likes;
         this._snackBar.open('Review liked!', 'Close', {
@@ -163,7 +162,6 @@ export class ProductDetailComponent {
 
     this.reviewApiService.removeLikeToReview(this.user.userId, id).subscribe(
       data => {
-        console.log(data);
         let reviewIndex = this.reviews.findIndex(review => review.id === id);
         this.reviews[reviewIndex].likes = data.likes;
         this._snackBar.open('Review DISliked!', 'Close', {
@@ -208,7 +206,6 @@ export class ProductDetailComponent {
     this._snackBar.open('Product added to cart!', 'Close', {
       duration: 2000 });
 
-    console.log(cart);
     localStorage.setItem('cart', JSON.stringify(cart));
 
 

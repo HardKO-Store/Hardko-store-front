@@ -31,5 +31,9 @@ export class UserApiService extends BaseService<User>{
     return this.http.get<ReducedProduct[]>(`${this.baseUrl}${this.resourceEndpoint}/${userId}/favorites`, this.httpOptions);
   }
 
+  deleteUser(userId: string): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}${this.resourceEndpoint}/${userId}`, this.httpOptions);
+  }
+
 
 }
