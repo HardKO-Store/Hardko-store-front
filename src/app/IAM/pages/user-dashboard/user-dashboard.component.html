@@ -112,7 +112,7 @@
       </mat-card-title>
       <mat-card-content>
         <div class="grid grid-cols-4 gap-5">
-          <div *ngIf="!reviews">
+          <div *ngIf="!reviews || reviews.length === 0">
             <p> still no reviews...</p>
           </div>
           <div *ngFor="let review of reviews">
