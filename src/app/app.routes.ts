@@ -4,6 +4,7 @@ import {ProductDetailComponent} from './store/pages/product-detail/product-detai
 import {LoginPageComponent} from './IAM/pages/login-page/login-page.component';
 import {CartPageComponent} from './cart/pages/cart-page/cart-page.component';
 import {UserDashboardComponent} from './IAM/pages/user-dashboard/user-dashboard.component';
+import {RegisterAccountComponent} from './IAM/pages/register-account/register-account.component';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,9 @@ export const routes: Routes = [
   {
     path: 'user/:id',
     component: UserDashboardComponent
+  },
+  {
+    path: 'register',
+    component: RegisterAccountComponent
   }
 ];

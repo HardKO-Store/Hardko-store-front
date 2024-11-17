@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {User} from '../../model/user.entity';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -28,7 +29,8 @@ export class LoginPageComponent {
   private _snackBar = inject(MatSnackBar);
 
 
-  constructor(private iamApiService: IamApiService) {
+  constructor(private iamApiService: IamApiService,
+              private router: Router) {
     this.login = new Login(null,null);
   }
 
@@ -60,4 +62,7 @@ export class LoginPageComponent {
     );
   }
 
+  toRegister(){
+    this.router.navigate(['/register']);
+  }
 }

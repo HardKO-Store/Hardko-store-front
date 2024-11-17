@@ -4,6 +4,7 @@ import {User} from '../model/user.entity';
 import {Observable} from 'rxjs';
 import {UpdateUser} from '../model/update-user.entity';
 import {ReducedProduct} from '../model/reduced-product.entity';
+import {CreateUser} from '../model/create-user.entity';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,10 @@ export class UserApiService extends BaseService<User>{
 
   deleteUser(userId: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}${this.resourceEndpoint}/${userId}`, this.httpOptions);
+  }
+
+  createUser(user: CreateUser): Observable<User>{
+    return this.http.post<User>(`${this.baseUrl}${this.resourceEndpoint}`, user, this.httpOptions);
   }
 
 

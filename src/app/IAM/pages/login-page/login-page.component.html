@@ -17,7 +17,13 @@
         </mat-form-field>
       </div>
     </mat-card-content>
-    <mat-card-actions class="justify-end">
+    <mat-card-actions class="justify-between">
+      <button
+        mat-raised-button
+        (click)="toRegister()"
+        color="accent" >
+        Register
+      </button>
       <button
         mat-raised-button
         (click)="userLogin()"
